@@ -150,6 +150,13 @@
             transform: translateY(1px);
         }
 
+        .surprise-button:disabled {
+            cursor: default;
+            opacity: 0.7;
+            transform: none;
+            box-shadow: 0 3px 10px rgba(161, 140, 209, 0.3);
+        }
+
         /* Surprise Modal */
         .modal-overlay {
             position: fixed;
@@ -414,7 +421,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>For My Dearest Friend ❤️</h1>
+            <h1>hi gwapa gwapa gwapa </h1> 
         </header>
 
         <div class="letter-container">
@@ -427,8 +434,8 @@
         </div>
 
         <div class="surprise-button-container">
-            <button class="surprise-button" id="surprise-button">
-                Click for a Surprise! 🎁
+            <button class="surprise-button" id="surprise-button" disabled>
+                Surprise 🎁
             </button>
         </div>
 
@@ -523,7 +530,7 @@
             }, 500);
 
             // Typewriter effect for letter
-            const letterContent = "My dearest friend,\n\nAs I sit here thinking about all our memories together, I can't help but smile. From our late-night talks to our spontaneous adventures, you've filled my life with so much joy and laughter. You've been my shoulder to cry on, my partner in crime, and my biggest supporter.\n\nOn your special day, I want you to know how grateful I am to have you in my life. You make every day brighter just by being you - kind, funny, and incredibly thoughtful.\n\nHappy Birthday to my favorite person in the world! Here's to many more years of friendship, laughter, and creating memories together.\n\nWith all my love,\n[Your Name]";
+            const letterContent = "Haiiii baby, i love love love you gid langga ko, dont forget nga im always here lang gid for youu, always remember that you have a kean nga gapalangga sa imu always, have a great birthday baby, u r 17 na subong. i hope nga you will always be happy gid, ill be there man for u to make you happy permi, no words can express kung ano ko ka grateful sa imu, i love you palangga ko, i love you gid."
             
             new Typed('#typed-text', {
                 strings: [letterContent],
@@ -557,26 +564,6 @@
 
             // Cursor effect
             document.addEventListener('mousemove', createCursorEffect);
-
-            // Surprise button functionality
-            const surpriseButton = document.getElementById('surprise-button');
-            const modalOverlay = document.getElementById('modal-overlay');
-            const modalClose = document.getElementById('modal-close');
-            const clickSound = document.getElementById('click-sound');
-
-            surpriseButton.addEventListener('click', function() {
-                clickSound.play();
-                modalOverlay.classList.add('active');
-                confetti({
-                    particleCount: 100,
-                    spread: 70,
-                    origin: { y: 0.6 }
-                });
-            });
-
-            modalClose.addEventListener('click', function() {
-                modalOverlay.classList.remove('active');
-            });
 
             // Music controls
             const musicToggle = document.getElementById('music-toggle');
